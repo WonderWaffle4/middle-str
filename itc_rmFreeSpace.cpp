@@ -5,7 +5,14 @@ string itc_rmFreeSpace(string str){
     string newstr = "";
     string answ = "";
     bool wasOnSpace = false;
+    bool flag = false;
     for(long long i = 0; i <= itc_len(str); i++){
+        if(str[0] == ' ' && !flag){
+            while(str[i] == ' '){
+                i++;
+            }
+            flag = true;
+        }
         if(str[i] == ' ' && !wasOnSpace) {
             wasOnSpace = true;
             newstr += ' ';
@@ -16,5 +23,6 @@ string itc_rmFreeSpace(string str){
     if(newstr[itc_len(newstr) - 1] == ' '){
         for(long long i = 0; i < itc_len(newstr) - 1; i++) answ += newstr[i];
     }
+    else answ = newstr;
     return answ;
 }
