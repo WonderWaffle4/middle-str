@@ -2,7 +2,7 @@
 
 string itc_Cezar(string str, int k){
     string newstr;
-    if(itc_abs(k) > 25) k -= (k / 25) * 25;
+    if(itc_abs(k) > 25) k -= (k / 26) * 26;
     if(k >= 0){
         for(long long i = 0; i <= itc_len(str); i++){
             if(str[i] >= 65 && str[i] <= 90){
