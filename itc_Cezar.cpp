@@ -6,10 +6,16 @@ string itc_Cezar(string str, int k){
     if(k >= 0){
         for(long long i = 0; i <= itc_len(str); i++){
             if(str[i] >= 65 && str[i] <= 90){
-                newstr += (str[i] + k - ((str[i] + k) / 90 * k));
+                if(str[i] + k > 90){
+                    newstr += str[i] + k - 26;
+                }
+                else newstr += str[i] + k;
             }
             if(str[i] >= 97 && str[i] <= 122){
-                newstr += (str[i] + k - ((str[i] + k) / 122 * k));
+                if(str[i] + k > 122){
+                    newstr += str[i] + k - 26;
+                }
+                else newstr += str[i] + k;
             }
         }
     }
