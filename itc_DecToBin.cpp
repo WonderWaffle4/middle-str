@@ -18,7 +18,6 @@ string itc_DecToBin(string str){
             num = itc_bin_num(num);
             newstr += itc_toString(num);
             num = 0;
-            cout << newstr << endl;
             numstr = "";
         }
         if(i < itc_len(str))
