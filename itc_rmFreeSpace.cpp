@@ -6,7 +6,7 @@ string itc_rmFreeSpace(string str){
     string answ = "";
     bool wasOnSpace = false;
     bool flag = false;
-    for(long long i = 0; i <= itc_len(str); i++){
+    for(long long i = 0; i < itc_len(str); i++){
         if(str[0] == ' ' && !flag){
             while(str[i] == ' '){
                 i++;
